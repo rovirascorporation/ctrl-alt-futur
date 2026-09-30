@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+  <!-- Logo propi de SMIXify: colors invertits i ones cap per avall -->
+  <circle cx="12" cy="12" r="11" fill="#000" stroke="#02f8c8" stroke-width="2"/>
+  <path d="M6 7.5c3.5 2 8.5 2 12 0M6.8 11.3c3 1.6 7.4 1.6 10.4 0M7.6 15c2.5 1.2 6.3 1.2 8.8 0" stroke="#02f8c8" stroke-width="1.9" fill="none" stroke-linecap="round"/>
+</svg>

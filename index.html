@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ctrl+Alt+Futur · Podcast</title>
+  <meta name="description" content="Ctrl+Alt+Futur, el podcast on descobrim què hi ha després de SMIX.">
+  <link rel="icon" type="image/svg+xml" href="img/logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app">
+    <!-- ============ SIDEBAR ============ -->
+    <aside class="sidebar">
+      <nav class="panel nav">
+        <div class="logo">
+          <img src="img/logo.svg" alt="" width="32" height="32">
+          <span>SMIXify</span>
+        </div>
+        <a href="#inici" class="nav-item" data-section="inici">
+          <svg viewBox="0 0 24 24"><path d="M12.5 3.25a1 1 0 0 0-1 0L4 7.6V20h5v-6h6v6h5V7.6z"/></svg>
+          Inici
+        </a>
+        <a href="#capitols" class="nav-item" data-section="capitols">
+          <svg viewBox="0 0 24 24"><path d="M3 5h2v2H3zm4 0h14v2H7zm-4 6h2v2H3zm4 0h14v2H7zm-4 6h2v2H3zm4 0h14v2H7z"/></svg>
+          Capítols
+        </a>
+        <a href="#convidats" class="nav-item" data-section="convidats">
+          <svg viewBox="0 0 24 24"><path d="M9 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm0 2c-3.3 0-7 1.7-7 4v2h14v-2c0-2.3-3.7-4-7-4zm7-2a3.5 3.5 0 1 0-1.3-6.7 5.9 5.9 0 0 1 0 6.4c.4.2.8.3 1.3.3zm1.7 2.1A5 5 0 0 1 20 18v2h3v-2c0-1.8-2.5-3.3-5.3-3.9z"/></svg>
+          Convidats
+        </a>
+        <a href="#presentacio" class="nav-item" data-section="presentacio">
+          <svg viewBox="0 0 24 24"><path d="M3 3h18v2h-1v10a2 2 0 0 1-2 2h-5v2.3l3.2 1.9-1 1.7L12 20.9l-3.2 2-1-1.8 3.2-1.8V17H6a2 2 0 0 1-2-2V5H3zm3 2v10h12V5z"/></svg>
+          Presentació
+        </a>
+      </nav>
+
+      <div class="panel library">
+        <div class="library-head nav-item">
+          <svg viewBox="0 0 24 24"><path d="M3 22V2h2v20zm6 0V2h2v20zm4.5-19.3 1.9-.7L22 21.3l-1.9.7z"/></svg>
+          La teva biblioteca
+        </div>
+        <a href="#inici" class="lib-item active">
+          <img src="img/portada.jpg" alt="">
+          <div>
+            <div class="lib-title">Ctrl+Alt+Futur</div>
+            <div class="lib-sub">Podcast · Grup SMIX</div>
+          </div>
+        </a>
+      </div>
+    </aside>
+
+    <!-- ============ MAIN ============ -->
+    <main class="main panel" id="main">
+      <header class="topbar" id="topbar">
+        <button class="top-play" id="topPlay" aria-label="Reprodueix">
+          <svg class="i-play" viewBox="0 0 24 24"><path d="M7 4.5v15l13-7.5z"/></svg>
+          <svg class="i-pause" viewBox="0 0 24 24"><path d="M6 4h4v16H6zm8 0h4v16h-4z"/></svg>
+        </button>
+        <span class="topbar-title">Ctrl+Alt+Futur</span>
+      </header>
+
+      <section class="hero" id="inici">
+        <svg class="hero-arcs" viewBox="0 0 1200 400" preserveAspectRatio="none" aria-hidden="true">
+          <path d="M-40 -20 C 180 10, 230 120, 210 260 C 195 360, 120 380, 60 420" stroke="#02f8c8" stroke-width="22" fill="none"/>
+          <path d="M1240 150 C 1080 170, 1020 280, 1060 440" stroke="#ae5efc" stroke-width="22" fill="none"/>
+        </svg>
+        <img class="hero-cover" src="img/portada.jpg" alt="Portada de Ctrl+Alt+Futur">
+        <div class="hero-info">
+          <span class="type">Podcast</span>
+          <h1 class="keys" aria-label="Ctrl+Alt+Futur">
+            <span class="key k-ctrl">Ctrl</span><span class="plus">+</span><span class="key k-alt">Alt</span><span class="plus">+</span><span class="key k-futur">Futur</span>
+          </h1>
+          <p class="tagline">reiniciem la mirada cap al futur professional</p>
+          <div class="hosts">
+            <span class="hosts-label">Presentat per</span>
+            <span class="sticker s-lime">Bernat</span><span class="sticker s-cyan">Alex G.</span><span class="sticker s-purple">Alex S.</span><span class="sticker s-yellow">Emilio</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="content">
+        <div class="actions">
+          <button class="big-play" id="bigPlay" aria-label="Reprodueix">
+            <svg class="i-play" viewBox="0 0 24 24"><path d="M7 4.5v15l13-7.5z"/></svg>
+            <svg class="i-pause" viewBox="0 0 24 24"><path d="M6 4h4v16H6zm8 0h4v16h-4z"/></svg>
+          </button>
+        </div>
+
+        <div class="layout">
+          <div>
+            <h2>Episodi</h2>
+
+            <article class="episode" id="episode">
+              <img src="img/portada.jpg" alt="">
+              <div class="ep-body">
+                <h3 class="ep-title"><span class="eq eq-inline" aria-hidden="true"><i></i><i></i><i></i></span>Ep. 1 · Què hi ha després de SMIX?</h3>
+                <p class="ep-meta">Ctrl+Alt+Futur</p>
+                <p class="ep-desc">
+                  Parlem amb tres persones del sector: en Jordi, mestre i tècnic TIC a la Generalitat;
+                  en David, professional de la ciberseguretat; i l'Eric, que va acabar SMIX fa poc i ara
+                  fa un grau superior. Trajectòria, dia a dia, condicions laborals i consells per als
+                  que estem estudiant SMIX.
+                </p>
+                <div class="ep-foot">
+                  <button class="ep-play" id="epPlay" aria-label="Reprodueix l'episodi">
+                    <svg class="i-play" viewBox="0 0 24 24"><path d="M7 4.5v15l13-7.5z"/></svg>
+                    <svg class="i-pause" viewBox="0 0 24 24"><path d="M6 4h4v16H6zm8 0h4v16h-4z"/></svg>
+                  </button>
+                  <span class="ep-date">30 de set. 2026 · <span id="epDuration">15 min</span></span>
+                  <div class="ep-progress"><div id="epProgress"></div></div>
+                </div>
+              </div>
+            </article>
+
+            <h2 class="section-gap" id="capitols">Capítols</h2>
+            <ol class="chapters" id="chapters"></ol>
+
+            <h2 class="section-gap" id="convidats">Convidats</h2>
+            <div class="cards">
+              <div class="card" data-chapter="1">
+                <div class="card-img cyan">J</div>
+                <div class="card-title">Jordi</div>
+                <div class="card-sub">Mestre i tècnic TIC a la Generalitat de Catalunya</div>
+                <div class="card-tag">Entrevista de <span class="name lime">Bernat</span></div>
+              </div>
+              <div class="card" data-chapter="2">
+                <div class="card-img purple">D</div>
+                <div class="card-title">David</div>
+                <div class="card-sub">Professional de la ciberseguretat</div>
+                <div class="card-tag">Entrevista d'<span class="name yellow">Emilio</span> i <span class="name cyan">Alex G.</span></div>
+              </div>
+              <div class="card" data-chapter="3">
+                <div class="card-img lime">E</div>
+                <div class="card-title">Eric</div>
+                <div class="card-sub">Ex-alumne de SMIX, ara al grau superior</div>
+                <div class="card-tag">Entrevista d'<span class="name purple">Alex S.</span></div>
+              </div>
+            </div>
+          </div>
+
+          <aside class="about">
+            <h2>Informació</h2>
+            <p>
+              <strong>Ctrl+Alt+Futur</strong> és el podcast on descobrim què hi ha després de
+              <strong>SMIX</strong> (Sistemes Microinformàtics i Xarxes). Som quatre estudiants del
+              cicle i parlem amb professionals del sector per saber com és la feina de veritat:
+              el sector públic, la ciberseguretat i el pas al grau superior.
+            </p>
+            <h3>Presentadors</h3>
+            <ul class="people">
+              <li><span class="p-avatar lime">BR</span> Bernat Rovira <span class="role">Edició i so</span></li>
+              <li><span class="p-avatar cyan">AG</span> Alex Gordillo</li>
+              <li><span class="p-avatar yellow">EF</span> Emilio Ferrero</li>
+              <li><span class="p-avatar purple">AS</span> Alex Subías</li>
+            </ul>
+            <div class="tags">
+              <span class="chip cyan">Tecnologia</span><span class="chip lime">Educació</span>
+              <span class="chip purple">Ciberseguretat</span><span class="chip yellow">Català</span>
+            </div>
+          </aside>
+        </div>
+
+        <!-- ============ PRESENTACIÓ (Canva) ============ -->
+        <section class="slides" id="presentacio">
+          <div class="slides-head">
+            <h2>Presentació</h2>
+            <div class="slides-actions">
+              <button class="pill" id="slidesFull">
+                <svg viewBox="0 0 24 24"><path d="M4 4h6v2H6v4H4zm10 0h6v6h-2V6h-4zM4 14h2v4h4v2H4zm14 0h2v6h-6v-2h4z"/></svg>
+                Pantalla completa
+              </button>
+              <a class="pill" href="https://canva.link/presentacio-podcast-ctrl-alt-futur" target="_blank" rel="noopener">Obre a Canva ↗</a>
+            </div>
+          </div>
+          <div class="slides-frame" id="slidesFrame">
+            <iframe loading="lazy" title="Presentació Ctrl+Alt+Futur"
+              src="https://www.canva.com/design/DAHWGT2T9Nk/bfgOEFeW4avcOrC-ykzvVQ/view?embed"
+              allow="fullscreen" allowfullscreen></iframe>
+            <button class="exit-full" id="slidesExit" title="Surt de pantalla completa">✕</button>
+          </div>
+        </section>
+        <!-- ============ AVÍS LEGAL ============ -->
+        <footer class="site-footer">
+          <div class="footer-brand"><img src="img/logo.svg" alt="" width="24" height="24"> SMIXify</div>
+          <p>
+            <strong>Avís:</strong> aquesta web és un projecte educatiu sense ànim de lucre fet per alumnes del
+            cicle de SMIX. <strong>No som Spotify</strong> ni tenim cap relació, associació, patrocini ni aprovació
+            de Spotify AB. El disseny només s'inspira en la seva interfície com a exercici de classe.
+            "Spotify" és una marca registrada de Spotify AB.
+          </p>
+          <p>© 2026 Ctrl+Alt+Futur · Bernat Rovira, Alex Gordillo, Emilio Ferrero i Alex Subías.</p>
+        </footer>
+      </section>
+    </main>
+  </div>
+
+  <!-- ============ PLAYER ============ -->
+  <footer class="player" id="player">
+    <div class="mini-progress"><div id="miniProgress"></div></div>
+    <a href="#inici" class="now">
+      <div class="now-cover">
+        <img src="img/portada.jpg" alt="">
+      </div>
+      <div class="now-text">
+        <div class="now-title">Ep. 1 · Què hi ha després de SMIX?</div>
+        <div class="now-sub" id="nowSub">Ctrl+Alt+Futur</div>
+      </div>
+    </a>
+
+    <div class="controls">
+      <div class="buttons">
+        <button class="ctrl" id="speedBtn" title="Velocitat de reproducció">1x</button>
+        <button class="ctrl" id="back15" title="Enrere 15 s">
+          <svg viewBox="0 0 24 24"><path d="M12 5V1L7 6l5 5V7a6 6 0 1 1-6 6H4a8 8 0 1 0 8-8z"/><text x="12" y="16" font-size="6" text-anchor="middle" fill="currentColor" font-family="Arial" font-weight="700">15</text></svg>
+        </button>
+        <button class="play" id="playBtn" aria-label="Reprodueix">
+          <svg class="i-play" viewBox="0 0 24 24"><path d="M7 4.5v15l13-7.5z"/></svg>
+          <svg class="i-pause" viewBox="0 0 24 24"><path d="M6 4h4v16H6zm8 0h4v16h-4z"/></svg>
+        </button>
+        <button class="ctrl" id="fwd15" title="Endavant 15 s">
+          <svg viewBox="0 0 24 24"><path d="M12 5V1l5 5-5 5V7a6 6 0 1 0 6 6h2a8 8 0 1 1-8-8z"/><text x="12" y="16" font-size="6" text-anchor="middle" fill="currentColor" font-family="Arial" font-weight="700">15</text></svg>
+        </button>
+        <button class="ctrl" id="restartBtn" title="Torna a l'inici">
+          <svg viewBox="0 0 24 24"><path d="M6 6h2v12H6zm3.5 6 8.5 6V6z"/></svg>
+        </button>
+      </div>
+      <div class="bar-row">
+        <span id="curTime">0:00</span>
+        <div class="seek-wrap"><input type="range" id="seek" min="0" max="100" step="0.1" value="0" aria-label="Progrés"><div class="seek-tip" id="seekTip">0:00</div></div>
+        <span id="totTime">0:00</span>
+      </div>
+    </div>
+
+    <div class="extra">
+      <button class="ctrl" id="muteBtn" title="Silencia">
+        <svg class="i-vol" viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9zm13.5 3A4.5 4.5 0 0 0 14 8v8a4.5 4.5 0 0 0 2.5-4z"/></svg>
+        <svg class="i-mute" viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9zm13.6-.4 1.4-1.4 2.1 2.1 2.1-2.1 1.4 1.4-2.1 2.1 2.1 2.1-1.4 1.4-2.1-2.1-2.1 2.1-1.4-1.4 2.1-2.1z"/></svg>
+      </button>
+      <input type="range" id="volume" min="0" max="1" step="0.01" value="1" aria-label="Volum">
+    </div>
+  </footer>
+
+  <!-- Poseu l'àudio a la carpeta audio/ amb aquest nom -->
+  <audio id="audio" src="audio/episodio1.mp3" preload="metadata"></audio>
+  <div class="toast" id="toast"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
