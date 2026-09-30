@@ -164,14 +164,14 @@ function updateChapter() {
 
 // ---------- Navegació ----------
 const main = $('main');
-const navItems = document.querySelectorAll('.nav-item[data-section]');
+const navItems = document.querySelectorAll('[data-section]');
 
 document.querySelectorAll('a[href^="#"]').forEach((a) => {
   a.addEventListener('click', (e) => {
     e.preventDefault();
     const id = a.getAttribute('href').slice(1);
     if (id === 'inici') main.scrollTo({ top: 0, behavior: 'smooth' });
-    else main.scrollTo({ top: $(id).offsetTop - 72, behavior: 'smooth' });
+    else main.scrollTo({ top: $(id).offsetTop - $('topbar').offsetHeight - 8, behavior: 'smooth' });
   });
 });
 
@@ -183,7 +183,7 @@ main.addEventListener('scroll', () => {
   let active = 'inici';
   navItems.forEach((n) => {
     const id = n.dataset.section;
-    if (id !== 'inici' && $(id).offsetTop - 120 <= main.scrollTop) active = id;
+    if (id !== 'inici' && $(id).offsetTop - $('topbar').offsetHeight - 40 <= main.scrollTop) active = id;
   });
   if (main.scrollTop + main.clientHeight >= main.scrollHeight - 4) active = 'presentacio';
   navItems.forEach((n) => n.classList.toggle('active', n.dataset.section === active));

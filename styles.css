@@ -342,22 +342,89 @@ input[type=range]::-moz-range-thumb { width: 11px; height: 11px; border-radius: 
 .toast.show { opacity: 1; transform: translate(-50%, 0); }
 
 /* ---------- Responsive ---------- */
+.m-tabs { display: none; }
+
+/* Portàtil petit / tauleta horitzontal: barra lateral només amb icones */
 @media (max-width: 1100px) {
-  .layout { grid-template-columns: 1fr; }
+  .app { grid-template-columns: 72px 1fr; }
+  .logo { justify-content: center; padding: 4px 0 12px; }
+  .logo span, .nav-item span, .lib-item > div { display: none; }
+  .nav-item { justify-content: center; padding: 12px 0; }
+  .library { padding: 8px 4px; }
+  .library-head { justify-content: center; padding: 12px 0; }
+  .lib-item { justify-content: center; padding: 6px 0; }
+  .layout { grid-template-columns: 1fr; gap: 40px; }
+  .about { max-width: 640px; }
 }
-@media (max-width: 760px) {
-  .app { grid-template-columns: 1fr; padding: 0; }
+
+/* Tauleta vertical: la capçalera s'apila */
+@media (max-width: 900px) {
+  .hero { flex-direction: column; align-items: flex-start; gap: 24px; }
+  .hero-cover { width: 200px; height: 200px; }
+  .keys { font-size: clamp(40px, 9vw, 72px); }
+  .player { grid-template-columns: 1fr 1.6fr auto; }
+  .extra input { display: none; }
+}
+
+/* Mòbil */
+@media (max-width: 640px) {
+  :root { --player-h: 72px; }
+  .app { grid-template-columns: 1fr; padding: 0; gap: 0; }
   .sidebar { display: none; }
   .panel.main { border-radius: 0; }
-  .hero { flex-direction: column; align-items: flex-start; gap: 20px; padding: 80px 16px 24px; }
-  .hero-cover { width: 200px; height: 200px; align-self: center; }
-  .content { padding: 0 16px 40px; }
+
+  .topbar { flex-wrap: wrap; gap: 10px; padding: 10px 16px; min-height: 0; background: var(--paper); border-bottom-color: var(--line); }
+  .top-play { width: 34px; height: 34px; }
+  .topbar-title { font-size: 17px; }
+  .topbar:not(.solid) .top-play, .topbar:not(.solid) .topbar-title { display: none; }
+  .m-tabs { display: flex; gap: 6px; width: 100%; overflow-x: auto; scrollbar-width: none; }
+  .m-tabs::-webkit-scrollbar { display: none; }
+  .m-tab {
+    flex-shrink: 0; padding: 6px 14px; border-radius: 32px; font-size: 14px; font-weight: 700;
+    text-decoration: none; border: 1.5px solid var(--text); background: var(--panel);
+  }
+  .m-tab.active { background: var(--text); color: var(--paper); }
+
+  .hero { margin-top: 0; padding: 20px 16px 24px; align-items: stretch; }
+  .hero-cover { width: min(220px, 60vw); height: auto; aspect-ratio: 1; align-self: center; box-shadow: 4px 4px 0 var(--text); }
+  .keys { font-size: clamp(30px, 10.5vw, 48px); }
+  .tagline { font-size: 16px; }
+  .hosts { gap: 6px; }
+  .hosts-label { width: 100%; margin-bottom: 2px; }
+  .sticker { font-size: 14px; padding: 4px 10px; }
+
+  .content { padding: 0 16px 32px; }
+  .actions { padding: 0 0 20px; }
+  .big-play { width: 54px; height: 54px; }
+  h2 { font-size: 22px; }
+  .section-gap { margin-top: 36px; }
+
   .episode { padding: 12px; gap: 12px; }
   .episode img { width: 64px; height: 64px; }
-  .player { grid-template-columns: 1fr auto; }
-  .now-sub, .extra, .bar-row, #speedBtn, #restartBtn { display: none; }
+  .ep-title { font-size: 16px; }
+
+  .chapter { grid-template-columns: 20px 1fr auto; gap: 12px; padding: 12px 8px; }
+
+  .cards { grid-template-columns: 1fr; gap: 10px; }
+  .card { display: grid; grid-template-columns: 72px 1fr; column-gap: 14px; align-items: center; padding: 10px; }
+  .card-img { grid-row: span 3; margin: 0; font-size: 34px; }
+  .card-sub { margin-top: 2px; }
+  .card-tag { margin-top: 6px; }
+
+  .slides { margin-top: 44px; }
+  .slides-head { flex-direction: column; align-items: flex-start; }
+  .slides-actions { width: 100%; }
+  .slides-actions .pill { flex: 1; justify-content: center; }
+
+  .player { grid-template-columns: 1fr auto; gap: 8px; padding: 0 12px; }
+  .now img { width: 48px; height: 48px; }
+  .now-sub { display: block; }
+  .buttons { gap: 6px; }
+  .extra, .bar-row, #speedBtn, #restartBtn { display: none; }
   .mini-progress { display: block; }
+  .toast { width: calc(100% - 32px); text-align: center; }
 }
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; }
 }
