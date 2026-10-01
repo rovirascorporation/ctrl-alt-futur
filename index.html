@@ -11,6 +11,50 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <!-- ============ PANTALLA D'ESPERA (fins al 10 d'octubre) ============ -->
+  <div class="gate" id="gate" hidden>
+    <svg class="gate-arcs" viewBox="0 0 1200 800" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M-40 -20 C 220 20, 300 200, 260 420 C 230 600, 120 700, 40 840" stroke="#02f8c8" stroke-width="26" fill="none"/>
+      <path d="M1240 380 C 1060 400, 980 560, 1030 840" stroke="#ae5efc" stroke-width="26" fill="none"/>
+    </svg>
+
+    <div class="gate-inner">
+      <h1 class="keys gate-keys" aria-label="Ctrl+Alt+Futur">
+        <span class="key k-ctrl">Ctrl</span><span class="plus">+</span><span class="key k-alt">Alt</span><span class="plus">+</span><span class="key k-futur">Futur</span>
+      </h1>
+      <p class="gate-status"><span class="dot"></span> Estem preparant el podcast</p>
+      <p class="gate-text">La web s'obrirà al públic el <strong>10 d'octubre de 2026</strong>.</p>
+
+      <div class="countdown" id="countdown" aria-live="polite">
+        <div class="cd-box cyan"><span id="cdDays">00</span><small>dies</small></div>
+        <div class="cd-box purple"><span id="cdHours">00</span><small>hores</small></div>
+        <div class="cd-box lime"><span id="cdMins">00</span><small>minuts</small></div>
+        <div class="cd-box yellow"><span id="cdSecs">00</span><small>segons</small></div>
+      </div>
+
+      <form class="pin-form" id="pinForm" autocomplete="off">
+        <label for="pinInput">Tens el PIN? Entra ara</label>
+        <div class="pin-row">
+          <input id="pinInput" type="password" inputmode="numeric" maxlength="8" placeholder="• • • •" aria-label="PIN">
+          <button type="submit" class="pin-btn">Entra</button>
+        </div>
+        <p class="pin-error" id="pinError" role="alert"></p>
+      </form>
+
+      <div class="teaser">
+        <div>
+          <p class="teaser-title">No et pots esperar?</p>
+          <p class="teaser-text">Mira la presentació en què estem treballant.</p>
+        </div>
+        <button class="pill teaser-btn" id="teaserBtn">Veure l'avançament ▸</button>
+      </div>
+      <div class="teaser-frame" id="teaserFrame" hidden>
+        <iframe title="Avançament de la presentació" allow="fullscreen" allowfullscreen></iframe>
+      </div>
+
+      <p class="gate-foot">Bernat Rovira · Alex Gordillo · Emilio Ferrero · Alex Subías — SMIX</p>
+    </div>
+  </div>
   <div class="app">
     <!-- ============ SIDEBAR ============ -->
     <aside class="sidebar">
@@ -253,6 +297,7 @@
   <audio id="audio" src="audio/episodio1.mp3" preload="metadata"></audio>
   <div class="toast" id="toast"></div>
 
+  <script src="gate.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
