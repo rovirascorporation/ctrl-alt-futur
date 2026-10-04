@@ -7,12 +7,12 @@ const volume = $('volume');
 const speeds = [1, 1.25, 1.5, 2, 0.75];
 let speedIndex = 0;
 
-// Canvieu els minuts ("start", en segons) quan tingueu l'àudio editat
+// Inici de cada capítol, en segons (0:26, 16:34 i 23:55)
 const chapters = [
-  { start: 0,   title: 'Presentació', sub: 'Alex G., Bernat, Emilio i Alex S.' },
-  { start: 60,  title: 'Entrevista 1 · Jordi', sub: 'Mestre i tècnic TIC a la Generalitat · amb Bernat' },
-  { start: 330, title: 'Entrevista 2 · David', sub: 'Ciberseguretat · amb Emilio i Alex G.' },
-  { start: 600, title: 'Entrevista 3 · Eric', sub: 'De SMIX al grau superior i les pràctiques · amb Alex S.' },
+  { start: 0,    title: 'Presentació', sub: 'Alex G., Bernat, Emilio i Alex S.' },
+  { start: 26,   title: 'Entrevista 1 · Jordi', sub: 'Mestre i tècnic TIC a la Generalitat · amb Bernat' },
+  { start: 994,  title: 'Entrevista 2 · David', sub: 'Ciberseguretat · amb Emilio i Alex G.' },
+  { start: 1435, title: 'Entrevista 3 · Eric', sub: 'De SMIX al grau superior i les pràctiques · amb Alex S.' },
 ];
 
 const fmt = (s) => {

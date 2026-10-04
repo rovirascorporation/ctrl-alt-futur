@@ -8,7 +8,7 @@
   <link rel="icon" type="image/svg+xml" href="img/logo.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=4">
+  <link rel="stylesheet" href="styles.css?v=5">
 </head>
 <body>
   <!-- ============ PANTALLA D'ESPERA (fins al 10 d'octubre) ============ -->
@@ -159,7 +159,7 @@
                     <svg class="i-play" viewBox="0 0 24 24"><path d="M7 4.5v15l13-7.5z"/></svg>
                     <svg class="i-pause" viewBox="0 0 24 24"><path d="M6 4h4v16H6zm8 0h4v16h-4z"/></svg>
                   </button>
-                  <span class="ep-date">30 de set. 2026 · <span id="epDuration">15 min</span></span>
+                  <span class="ep-date">30 de set. 2026 · <span id="epDuration">27 min</span></span>
                   <div class="ep-progress"><div id="epProgress"></div></div>
                 </div>
               </div>
@@ -280,7 +280,7 @@
       <div class="bar-row">
         <span id="curTime">0:00</span>
         <div class="seek-wrap"><input type="range" id="seek" min="0" max="100" step="0.1" value="0" aria-label="Progrés"><div class="seek-tip" id="seekTip">0:00</div></div>
-        <span id="totTime">0:00</span>
+        <span id="totTime">27:24</span>
       </div>
     </div>
 
@@ -297,7 +297,7 @@
   <audio id="audio" src="audio/episodio1.mp3" preload="metadata"></audio>
   <div class="toast" id="toast"></div>
 
-  <script src="gate.js?v=4"></script>
-  <script src="app.js?v=4"></script>
+  <script src="gate.js?v=5"></script>
+  <script src="app.js?v=5"></script>
 </body>
 </html>
