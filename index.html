@@ -8,7 +8,7 @@
   <link rel="icon" type="image/svg+xml" href="img/logo.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=6">
+  <link rel="stylesheet" href="styles.css?v=7">
 </head>
 <body>
   <div class="app">
@@ -187,6 +187,42 @@
               allow="fullscreen" allowfullscreen></iframe>
             <button class="exit-full" id="slidesExit" title="Surt de pantalla completa">✕</button>
           </div>
+
+          <!-- Guió de la presentació (del Google Doc "Guió Presentació") -->
+          <div class="script" id="guio">
+            <div class="slides-head">
+              <h3 class="script-heading">Guió de la presentació</h3>
+              <a class="pill" href="https://docs.google.com/document/d/1NbC679LtW-DeZh3OW40l5nu2I_t4BkCak1iiLmZoWCY/edit?usp=sharing" target="_blank" rel="noopener">Obre a Google Docs ↗</a>
+            </div>
+
+            <ol class="script-list">
+              <li class="script-part">
+                <h4><span class="part-num">1</span> Presentació i blocs</h4>
+                <p class="line"><span class="who lime">Bernat</span> Hola, bon dia. Us presentem el nostre projecte, el podcast «Ctrl+Alt+Futur». Jo soc el Bernat… La idea del projecte era veure com és el món de la informàtica per dins i saber què podem fer exactament quan s'acaba el grau d'SMIX.</p>
+                <p class="line"><span class="who purple">Alex S.</span> Per fer-ho, hem triat 3 persones amb experiències molt diferents en aquest sector. Ara us explicarem com han anat les entrevistes i què hem après de cadascuna d'elles.</p>
+              </li>
+              <li class="script-part">
+                <h4><span class="part-num">2</span> Entrevista 1: Educació i TIC</h4>
+                <p class="line"><span class="who lime">Bernat</span> A la primera part vaig entrevistar en Jordi, que és mestre i tècnic informàtic en una escola. Ens va explicar el seu dia a dia solucionant problemes tècnics a les aules, les seves tasques de manteniment i com funciona el sector públic.</p>
+              </li>
+              <li class="script-part">
+                <h4><span class="part-num">3</span> Entrevista 2: Ciberseguretat</h4>
+                <p class="line pending"><span class="who yellow">Emilio</span><span class="who cyan">Alex G.</span> Text pendent.</p>
+              </li>
+              <li class="script-part">
+                <h4><span class="part-num">4</span> Entrevista 3: SMIX → Grau Superior</h4>
+                <p class="line"><span class="who purple">Alex S.</span> Després jo vaig entrevistar l'Eric, que va passar de fer SMIX a fer un Grau Superior. Ens va explicar com s'adapta un estudiant a les pràctiques d'empresa, la importància del treball en equip, la pressió dels horaris i si hi ha opcions de quedar-se treballant fix en acabar.</p>
+              </li>
+              <li class="script-part">
+                <h4><span class="part-num">5</span> Dificultats i tancament</h4>
+                <p class="line"><span class="who lime">Bernat</span> Al principi anàvem una mica perduts amb les preguntes. La solució va ser fer un guió a mida per a cadascú segons a qui entrevistàvem. Finalment, jo m'he encarregat de fer l'edició completa de l'àudio per deixar el podcast llest.</p>
+              </li>
+              <li class="script-part">
+                <h4><span class="part-num">6</span> Conclusions</h4>
+                <p class="line pending">Text pendent.</p>
+              </li>
+            </ol>
+          </div>
         </section>
         <!-- ============ AVÍS LEGAL ============ -->
         <footer class="site-footer">
@@ -253,6 +289,6 @@
   <audio id="audio" src="audio/episodio1.mp3" preload="metadata"></audio>
   <div class="toast" id="toast"></div>
 
-  <script src="app.js?v=6"></script>
+  <script src="app.js?v=7"></script>
 </body>
 </html>

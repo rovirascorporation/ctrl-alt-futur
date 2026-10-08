@@ -425,6 +425,31 @@ input[type=range]::-moz-range-thumb { width: 11px; height: 11px; border-radius: 
   .toast { width: calc(100% - 32px); text-align: center; }
 }
 
+/* ---------- Guió de la presentació ---------- */
+.script { margin-top: 40px; }
+.script-heading { font-size: 22px; font-weight: 900; letter-spacing: -.03em; }
+.script-list { list-style: none; display: grid; gap: 12px; }
+.script-part {
+  background: var(--panel); border: 2px solid var(--text); border-radius: 12px; padding: 16px 18px;
+}
+.script-part h4 { display: flex; align-items: center; gap: 10px; font-size: 17px; font-weight: 800; letter-spacing: -.02em; margin-bottom: 10px; }
+.part-num {
+  display: grid; place-items: center; width: 26px; height: 26px; flex-shrink: 0;
+  border-radius: 50%; background: var(--text); color: var(--paper); font-size: 13px; font-weight: 800;
+}
+.line { font-size: 15px; line-height: 1.6; }
+.line + .line { margin-top: 10px; }
+.who {
+  display: inline-block; margin-right: 8px; padding: 0 7px;
+  border: 1.5px solid var(--text); font-size: 13px; font-weight: 800; font-style: normal; color: var(--text); vertical-align: 1px;
+}
+.who + .who { margin-left: -4px; }
+.line.pending { color: var(--muted); font-style: italic; }
+@media (max-width: 640px) {
+  .script-part { padding: 14px; }
+  .line { font-size: 14px; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; }
 }
