@@ -203,7 +203,7 @@ $('slidesExit').addEventListener('click', () => {
 
 // Barra espaiadora = play/pausa
 document.addEventListener('keydown', (e) => {
-  if (e.code === 'Space' && !document.body.classList.contains('locked') && !['INPUT', 'BUTTON', 'A'].includes(e.target.tagName)) {
+  if (e.code === 'Space' && !['INPUT', 'BUTTON', 'A'].includes(e.target.tagName)) {
     e.preventDefault();
     togglePlay();
   }
